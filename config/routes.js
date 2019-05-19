@@ -19,7 +19,19 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': { view: 'pages/homepage' },
+  '/': {
+    view: 'pages/homepage'
+  },
+  '/loan': {
+    view: 'pages/loan'
+  },
+  '/privacy': {
+    view: 'pages/privacy'
+  },
+  '/terms': {
+    view: 'pages/terms'
+  },
+  'POST /create': 'LeadController.create',
 
 
   /***************************************************************************
