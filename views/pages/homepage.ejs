@@ -1,57 +1,134 @@
 <header id="home" class="masthead">
     <div class="masthead-content">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-sm-6">
-            <div class="card p-5">
-              <form id="form-lead">
-                <h1 class="masthead-subheading mb-0">Quiero un préstamo</h1>
-                <p class="card-text">Te ayudamos a obtener un préstamo de acuerdo a tu perfil</p>
-                <label>¿Cuánto dinero necesitas?</label>
-                <fieldset>
-                  <input id="2000" class="radio-inline__input" type="radio" name="accessible-radio" value="2000" checked="checked"/>
-                  <label class="radio-inline__label" for="2000">
-                      $2,000
-                  </label>
-                  <input id="10000" class="radio-inline__input" type="radio" name="accessible-radio" value="10000"/>
-                  <label class="radio-inline__label" for="10000">
-                      $10,000
-                  </label>
-                  <input id="+10000" class="radio-inline__input" type="radio" name="accessible-radio" value="+10000"/>
-                  <label class="radio-inline__label" for="+10000">
-                      más de $10,000
-                  </label>
-                </fieldset>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <label for="">Teléfono celular</label>
-                      <input type="tel" class="form-control btn-rounded" id="phone" placeholder="10 dígitos" maxlength="10" onkeyup="onlyNumber()" >
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <label for="">Correo electrónico</label>
-                      <input type="email" class="form-control btn-rounded" id="email"  placeholder="Correo electrónico">
-                    </div>
-                  </div>
-                  <div class="col-sm-12">
-                    <hr>
-                    <label class="control control--checkbox">Acepto los términos y condiciones del servicio
-                      <input id="terms" type="checkbox" class="check-m" value="true" />
-                      <div class="control__indicator"></div>
-                    </label>
-                  </div>
-                  <div class="col-sm-12">
-                    <label class="control control--checkbox">Acepto el Aviso de privacidad
-                      <input id="privacy" type="checkbox" class="check-m" value="true" />
-                      <div class="control__indicator"></div>
-                    </label>
-                  </div>
+        <div class="row d-flex align-items-center">
+          <div class="col-sm-6"><h1 class="masthead-subheading text-white mb-3">Tus mejores opciones:</h1></div>
+          <!-- <div class="col-sm-6 text-right">
+            <div class="row">
+              <div class="col-sm-12">
+                <label class="mr-3 font-weight-bold text-white">Filtrar por:</label>
+              </div>
+              <div class="col-sm-12 mb-3">
+                <button id="monto" type="button" class="btn btn-warning mr-1">+ Monto</button>
+                <button id="plazo" type="button" class="btn btn-warning mr-1">+ Plazo</button>
+                <button id="interes" type="button" class="btn btn-warning">- Interés</button>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        
+        <div class="box-options">
+          <div data-monto="2000" data-plazo="10" data-interes="10.08" class="card mb-3">
+            <div class="card-body">
+              <div class="row d-flex align-items-center">
+                <div class="col-sm-3 text-center box-image">
+                  <img class="w-75" src="images/kueski.png" alt="Kueski">
+                  <p class="mb-0">
+                    <small class="font-weight-bold">¡Sin depósitos, aval o garantías!</small>
+                  </p>
                 </div>
-                <button type="submit" class="btn btn-primary btn-xl btn-block rounded-pill mt-5">Quiero un préstamo</button>
-              </form>
-                
+                <div class="col-sm-2 col-4">
+                  <h5 class="card-title mb-0">Monto:</h6>
+                  <p class="card-text">Prestan desde <strong class="text-success">$2,000</strong> en menos de 24 hrs.</p>
+                </div>
+                <div class="col-sm-2 col-4">
+                  <h5 class="card-title mb-0">Plazo:</h6>
+                  <p class="card-text">En un plazo de <br><strong class="text-primary">10 días a 40 días</strong></p>
+                </div>
+                <div class="col-sm-2 col-4">
+                  <h5 class="card-title mb-0">Interés:</h6>
+                  <p class="card-text">Con un interés del <strong class="text-danger">10.08%</strong></p>
+                </div>
+                <div class="col-sm-3 text-center">
+                   <a href="#" 
+                      data-toggle="modal" 
+                      data-target="#modalLender" 
+                      class="btn btn-primary rounded-pill px-4 mt-4 mt-md-0 btn-action">
+                      Quiero este préstamo
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-monto="5000" data-plazo="7" data-interes="40.08" class="card mb-3">
+            <div class="card-body">
+              <div class="row d-flex align-items-center">
+                <div class="col-sm-3 text-center box-image">
+                  <img class="w-75" src="images/lime.png" alt="Lime">
+                  <p class="mb-0">
+                    <small class="font-weight-bold">¡Sin depósitos, aval o garantías!</small>
+                  </p>
+                </div>
+                <div class="col-sm-2 col-4">
+                  <h5 class="card-title mb-0">Monto:</h6>
+                  <p class="card-text">Prestan desde <strong class="text-success">$5,000</strong> en menos de 24 hrs.</p>
+                </div>
+                <div class="col-sm-2 col-4">
+                  <h5 class="card-title mb-0">Plazo:</h6>
+                  <p class="card-text">En un plazo de <br><strong class="text-primary">7 días a 90 días</strong></p>
+                </div>
+                <div class="col-sm-2 col-4">
+                  <h5 class="card-title mb-0">Interés:</h6>
+                  <p class="card-text">Con un interés del <strong class="text-danger">40.08%</strong></p>
+                </div>
+                <div class="col-sm-3 text-center">
+                   <a href="#" data-toggle="modal" data-target="#modalLender" class="btn btn-primary rounded-pill px-4 mt-4 mt-md-0 btn-action">Quiero este préstamo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-monto="3000" data-plazo="15" data-interes="20.08" class="card mb-3">
+            <div class="card-body">
+              <div class="row d-flex align-items-center">
+                <div class="col-sm-3 text-center box-image">
+                  <img class="w-75" src="images/vivus.png" alt="Vivus">
+                  <p class="mb-0">
+                    <small class="font-weight-bold">¡Sin depósitos, aval o garantías!</small>
+                  </p>
+                </div>
+                <div class="col-sm-2 col-4">
+                  <h5 class="card-title mb-0">Monto:</h6>
+                  <p class="card-text">Prestan desde <strong class="text-success">$3,000</strong> en menos de 24 hrs.</p>
+                </div>
+                <div class="col-sm-2 col-4">
+                  <h5 class="card-title mb-0">Plazo:</h6>
+                  <p class="card-text">En un plazo de <br><strong class="text-primary">15 días a 60 días</strong></p>
+                </div>
+                <div class="col-sm-2 col-4">
+                  <h5 class="card-title mb-0">Interés:</h6>
+                  <p class="card-text">Con un interés del <strong class="text-danger">20.08%</strong></p>
+                </div>
+                <div class="col-sm-3 text-center">
+                   <a href="#" data-toggle="modal" data-target="#modalLender" class="btn btn-primary rounded-pill px-4 mt-4 mt-md-0 btn-action">Quiero este préstamo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-monto="10000" data-plazo="30" data-interes="30.08" class="card mb-3">
+            <div class="card-body">
+              <div class="row d-flex align-items-center">
+                <div class="col-sm-3 text-center box-image">
+                  <img class="w-75" src="images/dineria.jpg" alt="Dineria">
+                  <p class="mb-0">
+                    <small class="font-weight-bold">¡Sin depósitos, aval o garantías!</small>
+                  </p>
+                </div>
+                <div class="col-sm-2 col-4">
+                  <h5 class="card-title mb-0">Monto:</h6>
+                  <p class="card-text">Prestan <strong class="text-success">$10,000</strong> en menos de 24 hrs.</p>
+                </div>
+                <div class="col-sm-2 col-4">
+                  <h5 class="card-title mb-0">Plazo:</h6>
+                  <p class="card-text">En un plazo de <br><strong class="text-primary">30 días a 90 días</strong></p>
+                </div>
+                <div class="col-sm-2 col-4">
+                  <h5 class="card-title mb-0">Interés:</h6>
+                  <p class="card-text">Con un interés del <strong class="text-danger">30.08%</strong></p>
+                </div>
+                <div class="col-sm-3 text-center">
+                   <a href="#" data-toggle="modal" data-target="#modalLender" class="btn btn-primary rounded-pill px-4 mt-4 mt-md-0 btn-action">Quiero este préstamo</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -74,117 +151,105 @@
       <div class="row mb-5">
         <div class="col-sm-6 col-lg-4">
           <div class="row row-steps">
-            <div class="col-4 col-sm-12">
-              <img class="max60 mb-3" src="images/one.png" alt="paso 1">
+            <div class="col-4 col-sm-12 text-center">
+              <img class="max60 mb-3" src="images/1.png" alt="paso 1">
             </div>
             <div class="col-8 col-sm-12">
               <h3 class="font-weight-bold text-uppercase h5 text-purple">Paso 1</h3>
-              <p>Responde el formulario, no te tomará más de 2 minutos</p>
+              <p>Ordena las ofertas por la categoría que más te interese.</p>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-lg-4">
           <div class="row row-steps">
-            <div class="col-4 col-sm-12">
-              <img class="max60 mb-3" src="images/two.png" alt="paso 2">
+            <div class="col-4 col-sm-12 text-center">
+              <img class="max60 mb-3" src="images/2.png" alt="paso 2">
             </div>
             <div class="col-8 col-sm-12">
               <h3 class="font-weight-bold text-uppercase h5 text-purple">Paso 2</h3>
-              <p>Al terminar el formulario, te mostraremos el prestamista que más se acomode a tu perfil</p>
+              <p>Elige la oferta que más se adecue a tus necesidades</p>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-lg-4">
           <div class="row row-steps">
-            <div class="col-4 col-sm-12">
-              <img class="max60 mb-3" src="images/three.png" alt="paso 3">
+            <div class="col-4 col-sm-12 text-center">
+              <img class="max60 mb-3" src="images/3.png" alt="paso 3">
             </div>
             <div class="col-8 col-sm-12">
               <h3 class="font-weight-bold text-uppercase h5 text-purple">Paso 3</h3>
-              <p>Haz click en “aplicar ahora” para solicitar tu préstamo y ¡listo!</p>
+              <p>Solicita tu préstamo y ¡disfruta tu tu dinero!</p>
             </div>
           </div>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col col-sm-5 col-lg-3 text-center">
-          <a href="#home" class="btn btn-warning btn-rounded btn-lg px-4 font-weight-bold">Quiero un préstamo hoy</a>
+          <a href="#home"  class="btn btn-warning btn-rounded btn-lg px-4 font-weight-bold">Quiero un préstamo hoy</a>
         </div>
       </div>
     </div>
   </section>
 
+
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal fade" id="modalLender" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header ">
-        <h5 class="modal-title font-weight-bold text-center w-100" id="exampleModalCenterTitle">¡Gracias por aplicar!</h5>
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLender">Estás a un paso de obtener tu préstamo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div class="modal-body text-center">
-        <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-       <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
-    </svg>
-    <i id="success" class="fas fa-check-circle fa-5x text-success"></i>
-       <p id="msg" class="mt-3">Estamos buscando las mejor opción para ti...</p>
-       <p class="font-weight-bold kueski">Cumples con los requisitos para obtener tu préstamo de las siguientes opciones:</p>
-       <div class="row py-2 kueski-row">
-        <div class="col-sm-6">
-          <p class="text-center mb-0">
-            <img class="kueski w-50 mb-4 mb-md-0" src="images/kueski.png" alt="Kueski">
-         </p>
-         <span class="badge badge-success">Préstamo</span>
-        </div>
-        <div class="col-sm-6">
-          <p class="text-center mb-md-0 mt-3">  
-            <a target="_blank" href="https://ojo7.ltroute.com/click.track?CID=411912&AFID=428585" class="btn btn-warning btn-rounded font-weight-bold px-4 kueski">Aplicar ahora <i class="fas fa-angle-double-right ml-2"></i></a>
-         </p>
-        </div>
-       </div>
-       <hr class="kueski">
-       <div class="row py-2 kueski-row">
-        <div class="col-sm-6">
-          <p class="text-center mb-0">
-            <img class="kueski w-50 mb-4 mb-md-0" src="images/dineria.jpg" alt="Dineria">
-         </p>
-         <span class="badge badge-success">Préstamo</span>
-        </div>
-        <div class="col-sm-6">
-          <p class="text-center mb-md-0 mt-3">  
-            <a target="_blank" href="https://ojo7.ltroute.com/click.track?CID=426227&AFID=428585" class="btn btn-warning btn-rounded font-weight-bold px-4 kueski">Aplicar ahora <i class="fas fa-angle-double-right ml-2"></i></a>
-         </p>
-        </div>
-       </div>
-       <hr class="kueski">
-       <div class="row py-2 kueski-row">
-        <div class="col-sm-6">
-          <p class="text-center mb-0">
-            <img class="kueski w-50 mb-4 mb-md-0" src="images/lime.png" alt="Lime">
-         </p>
-         <span class="badge badge-success">Préstamo</span>
-        </div>
-        <div class="col-sm-6">
-          <p class="text-center mb-md-0 mt-3">  
-            <a target="_blank" href="https://ojo7.ltroute.com/click.track?CID=426193&AFID=428585" class="btn btn-warning btn-rounded font-weight-bold px-4 kueski">Aplicar ahora <i class="fas fa-angle-double-right ml-2"></i></a>
-         </p>
-        </div>
-       </div>
-       <hr class="kueski">
-       <div class="row py-2 kueski-row">
-        <div class="col-sm-6">
-          <p class="text-center mb-0">
-            <img class="kueski w-50 mb-4 mb-md-0" src="images/vivus.png" alt="Vivus">
-         </p>
-         <span class="badge badge-success">Préstamo</span>
-        </div>
-        <div class="col-sm-6">
-          <p class="text-center mb-md-0 mt-3">  
-            <a target="_blank" href="https://ojo7.ltroute.com/click.track?CID=418396&AFID=428585" class="btn btn-warning btn-rounded font-weight-bold px-4 kueski">Aplicar ahora <i class="fas fa-angle-double-right ml-2"></i></a>
-         </p>
-        </div>
-       </div>
-              
+      <div class="modal-body p-md-5">
+        <form id="form-lead">
+          <p class="card-text">Solo completa la siguiente información y te pondremos en contacto con este préstamista</p>
+          <!-- <fieldset>
+            <input id="2000" class="radio-inline__input" type="radio" name="accessible-radio" value="2000" checked="checked"/>
+            <label class="radio-inline__label" for="2000">
+                $2,000
+            </label>
+            <input id="10000" class="radio-inline__input" type="radio" name="accessible-radio" value="10000"/>
+            <label class="radio-inline__label" for="10000">
+                $10,000
+            </label>
+            <input id="+10000" class="radio-inline__input" type="radio" name="accessible-radio" value="+10000"/>
+            <label class="radio-inline__label" for="+10000">
+                más de $10,000
+            </label>
+          </fieldset> -->
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="">Teléfono celular</label>
+                <input type="tel" class="form-control btn-rounded" id="phone" placeholder="10 dígitos" maxlength="10" onkeyup="onlyNumber()" >
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="">Correo electrónico</label>
+                <input type="email" class="form-control btn-rounded" id="email"  placeholder="Correo electrónico">
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <hr>
+              <label class="control control--checkbox">Acepto los términos y condiciones del servicio
+                <input id="terms" type="checkbox" class="check-m" value="true" />
+                <div class="control__indicator"></div>
+              </label>
+            </div>
+            <div class="col-sm-12">
+              <label class="control control--checkbox">Acepto el Aviso de privacidad
+                <input id="privacy" type="checkbox" class="check-m" value="true" />
+                <div class="control__indicator"></div>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block rounded-pill my-3">Quiero este préstamo</button>
+        </form>
       </div>
     </div>
   </div>
 </div>
+

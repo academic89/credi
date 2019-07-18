@@ -11,6 +11,7 @@ module.exports = {
 		sails.log.debug(req.allParams())
 		Lead.create(req.allParams())
 			.then(function(Lead){
+				console.log('response',res);
 				return res.send({
 					'success': true,
 					'message': 'create Lead successfully!'

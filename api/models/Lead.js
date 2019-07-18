@@ -9,10 +9,6 @@ module.exports = {
 
   attributes: {
 
-    monto: {
-        type: 'string',
-        required: true
-    },
     phone: {
         type: 'string',
         required: true,
