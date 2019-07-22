@@ -16,16 +16,16 @@ var createLead = function(){
         console.log(value);
         switch (value) {
             case 'Kueski':
-                switchLender = 'https://ojo7.ltroute.com/click.track?CID=411912&AFID=428585';              
+                switchLender = 'http://offers.inbox-labs-tracking.com/aff_c?offer_id=2486&aff_id=1910&url_id=20386&source=sms';              
                 break;
-            case 'Lime':
-                switchLender = 'https://ojo7.ltroute.com/click.track?CID=426193&AFID=428585';
+            case 'Azteca':
+                switchLender = 'http://ntvn.io/W1a36';
                 break;
-            case 'Vivus':
-                switchLender = 'https://ojo7.ltroute.com/click.track?CID=418396&AFID=428585';
+            case 'AskRobin':
+                switchLender = 'https://robinacademia.com/?a=23&c=113&s1=Credigenio';
                 break;
-            case 'Dineria':
-                switchLender = 'https://ojo7.ltroute.com/click.track?CID=426227&AFID=428585';
+            case 'Coru':
+                switchLender = 'https://afiliacion.net/?a=1988640&c=8890&s1=AI_AgenciaIvan_MX-SMS';
                 break;
             default:
                 console.log('error al colocar al lender');
@@ -82,8 +82,8 @@ var createLead = function(){
         } else {
 
             $.ajax({ 
-		        //url:'https://credigenio.mx/create/?',
-                url:'http://localhost:1337/create/?',  
+		        url:'https://prestamagico.com/create/?',
+                //url:'http://localhost:1337/create/?',  
                 type: 'POST', 
                 contentType: 'application/json', 
                 data: JSON.stringify({ 
@@ -100,9 +100,9 @@ var createLead = function(){
               success: function(data, textStatus, jQxhr){
                   	
                     // console.log('link', switchLender);
-                    console.log('data', data);
+                    //console.log('data', data);
                     if(data.success){
-                       // fbq('track', 'Lead');
+                       fbq('track', 'SubmitApplication');
                     } else {
                       console.log('este teléfono ya se encuentra registrado')  
                     };
@@ -118,31 +118,6 @@ var createLead = function(){
     })
 }
 
-// var items = $('.card');
-
-// $('#monto').click(function(){
-//     items.sort(function(a, b){
-//         return -$(a).data('monto') - -$(b).data('monto');
-//     });
-
-//     items.appendTo('.box-options');
-// });
-
-// $('#plazo').click(function(){
-//     items.sort(function(a, b){
-//         return -$(a).data('plazo') - -$(b).data('plazo');
-//     });
-
-//     items.appendTo('.box-options');
-// });
-
-// $('#interes').click(function(){
-//     items.sort(function(a, b){
-//         return +$(a).data('interes') - +$(b).data('interes');
-//     });
-
-//     items.appendTo('.box-options');
-// });
 
 createLead();
 
