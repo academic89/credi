@@ -51,7 +51,7 @@ module.exports.datastores = {
     // adapter: 'sails-mysql',
     // url: 'mysql://user:password@host:port/database',
     adapter: 'sails-postgresql',
-    url : 'postgresql://postgres:postgres@localhost:5432/crediDB'
+    url : 'postgresql://postgres:postgres@localhost:5432/credidb'
 
   },
 
