@@ -59,12 +59,19 @@ var createLead = function(){
         // monto = $('input[name=accessible-radio]:checked').val(),
         var phone = $('#phone').val(),
             email = $('#email').val(),
-            terms = $('input#terms').val(),
-            privacy = $('input#privacy').val(),
+            // terms = $('input#terms').val(),
+            // privacy = $('input#privacy').val(),
+            terms = true,
+            privacy = true,
             dateRegister = dateFull,
             dateHour = hourFull,
             emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
+        //  else if(!$("#terms").prop("checked")){
+        //     alert('Debes aceptar los Términos y condiciones')
+        // } else if(!$("#privacy").prop("checked")) {
+        //     alert('Debes aceptar El aviso de privacidad')
+        // }
             
         //Validations Form
         if(phone == ''){
@@ -75,10 +82,6 @@ var createLead = function(){
             alert('Ingresa un correo electrónico válido')
         } else if(emailRegex.test(email) == false) {
             alert('Ingresa un correo electrónico válido')
-        } else if(!$("#terms").prop("checked")){
-            alert('Debes aceptar los Términos y condiciones')
-        } else if(!$("#privacy").prop("checked")) {
-            alert('Debes aceptar El aviso de privacidad')
         } else {
 
             $.ajax({ 
@@ -100,7 +103,7 @@ var createLead = function(){
               success: function(data, textStatus, jQxhr){
                   	
                     // console.log('link', switchLender);
-                    //console.log('data', data);
+                    console.log('data', data);
                     if(data.success){
                        fbq('track', 'SubmitApplication');
                     } else {
