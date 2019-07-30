@@ -22,6 +22,27 @@ module.exports.routes = {
   '/': {
     view: 'pages/homepage'
   },
+  '/step1': {
+    view: 'pages/step1'
+  },
+  '/step2': {
+    view: 'pages/step2'
+  },
+  '/step3': {
+    view: 'pages/step3'
+  },
+  '/step4': {
+    view: 'pages/step4'
+  },
+  '/step5': {
+    view: 'pages/step5'
+  },
+  '/step6': {
+    view: 'pages/step6'
+  },
+  '/results': {
+    view: 'pages/results'
+  },
   '/loan': {
     view: 'pages/loan'
   },

@@ -7,32 +7,90 @@ var onlyNumber = function(){
     }
 }
 
+$('.btn-next').click(function(){
+    let url = $(this).data('url');
+    let pathname = window.location.pathname;
+
+    switch (pathname) {
+        case '/step2':
+            let check = $('input[name="radio"]').is(':checked');
+            let check2 = $('input[name="radio2"]').is(':checked');
+            if(!check) { 
+                alert("selecciona un ingreso mensual") 
+            } else if(!check2){
+                alert("selecciona si puedes comprobar tus ingresos") 
+            } else {
+                window.location.pathname = url;
+            }
+            break;
+        case '/step3':
+            let check3 = $('input[name="radio"]').is(':checked');
+            if(!check3) {
+                alert('selecciona un estatus laboral')
+            } else {
+               window.location.pathname = url; 
+            }
+            break;
+        case '/step4':
+            let check4 = $('input[name="radio"]').is(':checked');
+            if(!check4) {
+                alert('selecciona una opción')
+            } else {
+               window.location.pathname = url; 
+            }
+            break;
+        case '/step6':
+            let terms = $('input#terms').val();
+            let privacy = $('input#terms').val();
+            if(!$("#terms").prop("checked")){
+                alert('Debes aceptar los Términos y condiciones');
+            } else if(!$("#privacy").prop("checked")){
+                alert('Debes aceptar el Aviso de privacidad');
+            } else {
+                window.location.pathname = url; 
+            }
+            break;
+    }
+    
+})
+
+$('input.cbx[type=checkbox]').click(function(){
+  let valCheck = $('input.cbx[type=checkbox]').is(':checked');
+  if (valCheck) {
+      $('.hidden-box').fadeIn('slow');
+      $('#textInfo').fadeOut('slow');
+  }else{
+      $('.hidden-box').fadeOut();
+      $('#textInfo').fadeIn();
+  };
+});
+
 
 var createLead = function(){
-    var switchLender;
+    // var switchLender;
 
-    $('body').on('click', '.btn-action', function() {
-        let value = $(this).parent().parent().find('.box-image img').attr('alt');
-        console.log(value);
-        switch (value) {
-            case 'Kueski':
-                switchLender = 'http://offers.inbox-labs-tracking.com/aff_c?offer_id=2486&aff_id=1910&url_id=20386&source=sms';              
-                break;
-            case 'Azteca':
-                switchLender = 'http://ntvn.io/W1a36';
-                break;
-            case 'AskRobin':
-                switchLender = 'https://robinacademia.com/?a=23&c=113&s1=Credigenio';
-                break;
-            case 'Coru':
-                switchLender = 'https://afiliacion.net/?a=1988640&c=8890&s1=AI_AgenciaIvan_MX-SMS';
-                break;
-            default:
-                console.log('error al colocar al lender');
-                break;
-        }
+    // $('body').on('click', '.btn-action', function() {
+    //     let value = $(this).parent().parent().find('.box-image img').attr('alt');
+    //     console.log(value);
+    //     switch (value) {
+    //         case 'Kueski':
+    //             switchLender = 'http://offers.inbox-labs-tracking.com/aff_c?offer_id=2486&aff_id=1910&url_id=20386&source=sms';              
+    //             break;
+    //         case 'Azteca':
+    //             switchLender = 'http://ntvn.io/W1a36';
+    //             break;
+    //         case 'AskRobin':
+    //             switchLender = 'https://robinacademia.com/?a=23&c=113&s1=Credigenio';
+    //             break;
+    //         case 'Coru':
+    //             switchLender = 'https://afiliacion.net/?a=1988640&c=8890&s1=AI_AgenciaIvan_MX-SMS';
+    //             break;
+    //         default:
+    //             console.log('error al colocar al lender');
+    //             break;
+    //     }
      
-    });
+    // });
 
     $('#form-lead').submit(function(event){
         event.preventDefault();
@@ -85,7 +143,7 @@ var createLead = function(){
         } else {
 
             $.ajax({ 
-		        url:'https://prestamagico.com/create/?',
+                url:'https://prestamagico.com/create/?',
                 //url:'http://localhost:1337/create/?',  
                 type: 'POST', 
                 contentType: 'application/json', 
@@ -101,7 +159,7 @@ var createLead = function(){
                   alert('error en el servicio');  
               }, 
               success: function(data, textStatus, jQxhr){
-                  	
+                    
                     // console.log('link', switchLender);
                     console.log('data', data);
                     if(data.success){
@@ -110,8 +168,11 @@ var createLead = function(){
                       console.log('este teléfono ya se encuentra registrado')  
                     };
                     document.getElementById("form-lead").reset();
-                    $('#modalLender').modal('hide');
-                    window.open(switchLender);  
+                    // $('#modalLender').modal('hide');
+                    // window.open(switchLender);
+                    setTimeout(function(){
+                      window.location.pathname = '/step2';
+                    }, 800);  
 
                 }
             }); 
