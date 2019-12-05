@@ -163,7 +163,7 @@ var createLead = function(){
                     // console.log('link', switchLender);
                     console.log('data', data);
                     if(data.success){
-                       fbq('track', 'CompleteRegistration');
+                       fbq('track', 'Lead');
                     } else {
                       console.log('este teléfono ya se encuentra registrado')  
                     };
