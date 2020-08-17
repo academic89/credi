@@ -50,6 +50,9 @@ $('.btn-next').click(function(){
                 window.location.pathname = url; 
             }
             break;
+        case '/results':
+            fbq('track', 'Lead');
+            break;
     }
     
 })
@@ -163,7 +166,8 @@ var createLead = function(){
                     // console.log('link', switchLender);
                     console.log('data', data);
                     if(data.success){
-                       fbq('track', 'Lead');
+                    //    fbq('track', 'Lead');
+                        console.warn('success lead');
                     } else {
                       console.log('este teléfono ya se encuentra registrado')  
                     };
