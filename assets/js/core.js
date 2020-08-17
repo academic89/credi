@@ -50,9 +50,6 @@ $('.btn-next').click(function(){
                 window.location.pathname = url; 
             }
             break;
-        case '/results':
-            fbq('track', 'Lead');
-            break;
     }
     
 })
