@@ -5,39 +5,38 @@
  */
 
 body {
-  font-family: 'Lato';
+  font-family: "Lato";
 }
 fieldset {
-  text-align: center
+  text-align: center;
 }
 
 .max60 {
-    max-width: 80%;
+  max-width: 80%;
 }
-@media (min-width: 768px){
- .max60 {
+@media (min-width: 768px) {
+  .max60 {
     max-width: 40%;
-  } 
+  }
 }
 
 /*   S T Y L E S      H E I G H T S          */
 
-.h100{
+.h100 {
   min-height: 100vh;
 }
-.h85{
+.h85 {
   min-height: 85vh;
 }
-.h75{
+.h75 {
   min-height: 75vh;
 }
-.h50{
+.h50 {
   min-height: 50vh;
 }
-.h40{
+.h40 {
   min-height: 40vh;
 }
-
 
 h1,
 h2,
@@ -45,7 +44,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Catamaran';
+  font-family: "Catamaran";
   font-weight: 800 !important;
 }
 
@@ -61,13 +60,34 @@ h6 {
   background-color: #000 !important;
 }
 
-.bg-gradient{
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,579dd6+50,207cca+100,7db9e8+100,207cca+100 */
-background: #1e5799; /* Old browsers */
-background: -moz-linear-gradient(left, #1e5799 0%, #579dd6 50%, #207cca 100%, #7db9e8 100%, #207cca 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left, #1e5799 0%,#579dd6 50%,#207cca 100%,#7db9e8 100%,#207cca 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right, #1e5799 0%,#579dd6 50%,#207cca 100%,#7db9e8 100%,#207cca 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#207cca',GradientType=1 ); /* IE6-9 */
+.bg-gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,579dd6+50,207cca+100,7db9e8+100,207cca+100 */
+  background: #1e5799; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #1e5799 0%,
+    #579dd6 50%,
+    #207cca 100%,
+    #7db9e8 100%,
+    #207cca 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    #1e5799 0%,
+    #579dd6 50%,
+    #207cca 100%,
+    #7db9e8 100%,
+    #207cca 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1e5799 0%,
+    #579dd6 50%,
+    #207cca 100%,
+    #7db9e8 100%,
+    #207cca 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#207cca',GradientType=1 ); /* IE6-9 */
 }
 
 .rounded-pill {
@@ -99,12 +119,12 @@ header.masthead {
   overflow: hidden;
   padding-top: calc(2rem + 72px);
   padding-bottom: 7rem;
-  background: -webkit-gradient(linear, left bottom, left top, from(#ff6a00), to(#ee0979));
+  /* background: -webkit-gradient(linear, left bottom, left top, from(#ff6a00), to(#ee0979));
   background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
-  background-size: cover;
+  background-size: cover; */
 }
 
 header.masthead .masthead-content {
@@ -124,7 +144,13 @@ header.masthead .bg-circle {
   z-index: 0;
   position: absolute;
   border-radius: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#ee0979), to(#ff6a00));
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#ee0979),
+    to(#ff6a00)
+  );
   background: linear-gradient(0deg, #ee0979 0%, #ff6a00 100%);
 }
 
@@ -178,7 +204,9 @@ header.masthead .bg-circle-4 {
   border-color: #ee0979;
 }
 
-.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover {
   background-color: #bd0760 !important;
   border-color: #bd0760 !important;
 }
@@ -193,7 +221,9 @@ header.masthead .bg-circle-4 {
   border-color: #ff6a00;
 }
 
-.btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
+.btn-secondary:active,
+.btn-secondary:focus,
+.btn-secondary:hover {
   background-color: #cc5500 !important;
   border-color: #cc5500 !important;
 }
@@ -204,32 +234,31 @@ header.masthead .bg-circle-4 {
 }
 
 .radio-inline__input {
-    clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
 }
 
 .radio-inline__label {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    margin-right: 2px;
-    border-radius: 3px;
-    transition: all .2s;
-    border: 1px solid #29DF84;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-right: 2px;
+  border-radius: 3px;
+  transition: all 0.2s;
+  border: 1px solid #29df84;
 }
 
 .radio-inline__input:checked + .radio-inline__label {
-    background: #29DF84;
-    color: #fff;
-    text-shadow: 0 0 1px rgba(0,0,0,.7);
+  background: #29df84;
+  color: #fff;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
 }
 
 .radio-inline__input:focus + .radio-inline__label {
-    outline-color: #29DF84;
-    outline-offset: -2px;
-    outline-style: auto;
-    outline-width: 5px;
+  outline-color: #29df84;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
 }
-
 
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
@@ -246,40 +275,45 @@ header.masthead .bg-circle-4 {
 [type="checkbox"]:checked + label:before,
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
-  content: '';
+  content: "";
   position: absolute;
 }
 [type="checkbox"]:not(:checked) + label:before,
 [type="checkbox"]:checked + label:before {
-  left: 0; top: 0;
-  width: 80px; height: 30px;
-  background: #DDDDDD;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 30px;
+  background: #dddddd;
   border-radius: 6px;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
 }
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
-  width: 30px; height: 30px;
-  transition: all .2s;
+  width: 30px;
+  height: 30px;
+  transition: all 0.2s;
   border-radius: 6px 0 0 6px;
-  background: #7F8C9A;
-  top: 0; left: 0;
+  background: #7f8c9a;
+  top: 0;
+  left: 0;
 }
 
 /* on checked */
 [type="checkbox"]:checked + label:before {
-  background:#DAF4FF;
+  background: #daf4ff;
 }
 [type="checkbox"]:checked + label.zen.option2:before {
-  background:#EEB900;
+  background: #eeb900;
 }
 [type="checkbox"]:checked + label:after {
   background: #058fcc;
-  top: 0; left: 51px;
+  top: 0;
+  left: 51px;
   border-radius: 0 6px 6px 0;
 }
 [type="checkbox"]:checked + label.zen.option2:after {
-  background: #ED9108;
+  background: #ed9108;
 }
 
 [type="checkbox"]:checked + label .ui,
@@ -292,146 +326,161 @@ header.masthead .bg-circle-4 {
   font-size: 12px;
   font-weight: bold;
   line-height: 22px;
-  transition: all .2s;
+  transition: all 0.2s;
 }
-[type="checkbox"]:checked + label{
-    color:#058fcc;
+[type="checkbox"]:checked + label {
+  color: #058fcc;
 }
-[type="checkbox"]:checked + label.zen.option2{
-    color:#ffc107;
+[type="checkbox"]:checked + label.zen.option2 {
+  color: #ffc107;
 }
 
 [type="checkbox"]:not(:checked) + label .ui:before {
-  font-family: 'themify';
+  font-family: "themify";
   content: "\e64c";
   left: 46px;
   margin-top: 3px;
-  color:#ccc;
+  color: #ccc;
 }
 [type="checkbox"]:checked + label .ui:after {
-  font-family: 'themify';
+  font-family: "themify";
   content: "\e64c";
-  color:#058fcc;
+  color: #058fcc;
   margin-top: 3px;
   left: 12px;
 }
 [type="checkbox"]:checked + label.zen.option2 .ui:after {
-  font-family: 'themify';
+  font-family: "themify";
   content: "\e64c";
-  color:#fff;
+  color: #fff;
   margin-top: 3px;
   left: 12px;
 }
 [type="checkbox"]:focus + label:before {
-  border: 0; outline: 0;
+  border: 0;
+  outline: 0;
   box-sizing: border-box;
 }
 
 .control {
-    display: block;
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 15px;
-    cursor: pointer;
-    font-size: 15px;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 15px;
 }
 .control input {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
 .control__indicator {
-    position: absolute;
-    top: 2px;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background: #e6e6e6;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
 }
 
 .control input:checked ~ .control__indicator {
-    background: #0A7FCB;
+  background: #0a7fcb;
 }
 
 .control__indicator:after {
-    content: '';
-    position: absolute;
-    display: none;
+  content: "";
+  position: absolute;
+  display: none;
 }
 .control--checkbox .control__indicator:after {
-    left: 8px;
-    top: 4px;
-    width: 6px;
-    height: 10px;
-    border: solid #fff;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
+  left: 8px;
+  top: 4px;
+  width: 6px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
 
 .control input:checked ~ .control__indicator:after {
-    display: block;
+  display: block;
 }
-
 
 .spinner {
   animation: rotator 1.4s linear infinite;
 }
 
-.kueski, .kueski-row{
+.kueski,
+.kueski-row {
   display: none;
 }
 
-#success{
+#success {
   display: none;
 }
 
 @keyframes rotator {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(270deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
 }
 
 .path {
   stroke-dasharray: 187;
   stroke-dashoffset: 0;
   transform-origin: center;
-  animation: dash 1.4s ease-in-out infinite, 
-    colors 5.6s ease-in-out infinite;
+  animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
 }
 
 @keyframes colors {
-  0% { stroke: #4285F4; }
-  25% { stroke: #DE3E35; }
-  50% { stroke: #F7C223; }
-  75% { stroke: #1B9A59; }
-  100% { stroke: #4285F4; }
+  0% {
+    stroke: #4285f4;
+  }
+  25% {
+    stroke: #de3e35;
+  }
+  50% {
+    stroke: #f7c223;
+  }
+  75% {
+    stroke: #1b9a59;
+  }
+  100% {
+    stroke: #4285f4;
+  }
 }
 
 @keyframes dash {
- 0% { stroke-dashoffset: 187; }
- 50% {
-   stroke-dashoffset: 47;
-   transform:rotate(135deg);
- }
- 100% {
-   stroke-dashoffset: 187;
-   transform:rotate(450deg);
- }
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 47;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    transform: rotate(450deg);
+  }
 }
 .btn-warning:hover,
 .btn-warning:active,
 .btn-warning:focus {
-    color: #fff;
-    background-color: #000;
-    border-color: #000;
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
 }
 
-.card-text{
+.card-text {
   font-size: 12px;
 }
 
 @media (min-width: 768px) {
-  .card-text{
+  .card-text {
     font-size: 14px;
   }
 }
-
